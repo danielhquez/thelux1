@@ -9,9 +9,9 @@ def hello():
     user = request.args.get('user')
     password = request.args.get('password')
     if (user=='atlanticomedio') and(password== '1234' ):
-        return "ok"
+        return Response ("ok", status =200)
     else:
-        return "ko"
+        return Response ("ko", status=401)
 
 if __name__ == '__main__':
      app.run(port='5000')
